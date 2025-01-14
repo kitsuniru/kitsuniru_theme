@@ -12,7 +12,7 @@ const stylingSettings = (self: vscode.Extension<any>): Record<string, any> => {
         "custom-ui-style.preferRestart": true,
         'custom-ui-style.background.opacity': 0.94,
         'custom-ui-style.external.imports': [
-            'file:///' + selfExtensionPath + '/assets/custom.css'
+            'file://' + selfExtensionPath + '/assets/custom.css'
         ],
         'custom-ui-style.background.url': 'file:///' + selfExtensionPath + '/assets/background.jpg'
     };

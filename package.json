@@ -8,7 +8,9 @@
 		"name": "Artemis Kushnere",
 		"email": "kitsushimo.dev@gmail.com"
 	},
-	"activationEvents": [],
+	"activationEvents": [
+		"onStartupFinished"
+	],
 	"main": "./out/extension.js",
 	"icon": "logo.jpg",
 	"galleryBanner": {

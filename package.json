@@ -8,6 +8,9 @@
 		"name": "Artemis Kushnere",
 		"email": "kitsushimo.dev@gmail.com"
 	},
+	"extensionPack": [
+		"subframe7536.custom-ui-style"
+	],
 	"activationEvents": [
 		"onStartupFinished"
 	],

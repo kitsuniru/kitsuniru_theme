@@ -11,6 +11,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: npm install
+      - run: npm install typescript
+      - run: tsc -p ./
       - name: Set version to ${{ github.ref_name }}
         uses: cezarypiatek/VsixVersionAction@1.1
         with:

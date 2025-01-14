@@ -8,7 +8,8 @@
 		"name": "Artemis Kushnere",
 		"email": "kitsushimo.dev@gmail.com"
 	},
-	"main": "./src/extension.ts",
+	"activationEvents": [],
+	"main": "./out/extension.js",
 	"icon": "logo.jpg",
 	"galleryBanner": {
 		"color": "#15141b",
@@ -34,6 +35,12 @@
 		"kitsuniru-theme",
 		"color-theme"
 	],
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"lint": "eslint",
+		"watch": "tsc -watch -p ./"
+	},
 	"contributes": {
 		"themes": [
 			{

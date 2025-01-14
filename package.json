@@ -1,0 +1,45 @@
+{
+	"name": "kitsuniru-theme",
+	"displayName": "Kitsuniru Theme",
+	"description": "A beautiful dark theme for Visual Studio Code",
+	"version": "0.0.2",
+	"publisher": "Kitsuniru",
+	"author": {
+		"name": "Archie Kitsuniru",
+		"email": "kitsushimo.dev@gmail.com"
+	},
+	"icon": "logo.png",
+	"galleryBanner": {
+		"color": "#15141b",
+		"theme": "dark"
+	},
+	"license": "MIT",
+	"engines": {
+		"vscode": "^1.47.0"
+	},
+	"categories": [
+		"Themes"
+	],
+	"keywords": [
+		"theme",
+		"dark",
+		"kitsuniru-theme",
+		"color-theme"
+	],
+	"contributes": {
+		"themes": [
+			{
+				"label": "Kitsuniru Theme",
+				"uiTheme": "vs-dark",
+				"path": "./themes/kitsuniru-dark-color-theme.json"
+			}
+		]
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/kitsuniru/kitsuniru-theme.git"
+	},
+	"bugs": {
+		"url": "https://github.com/kitsuniru/kitsuniru-theme/issues"
+	}
+}

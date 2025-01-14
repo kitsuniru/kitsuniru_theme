@@ -1,6 +1,7 @@
 import * as vscode from "vscode";
 import { updateUserSettings } from "./user_settings";
 import { extensionFullName, lastVersionKey } from "./constants";
+import { validateCustomUiStyle } from "./styling_utils";
 
 
 export async function activate(context: vscode.ExtensionContext) {
@@ -11,6 +12,7 @@ export async function activate(context: vscode.ExtensionContext) {
     if (currentVersion !== lastVersion) {
         context.globalState.update(lastVersionKey, currentVersion);
         updateUserSettings(self);
+        validateCustomUiStyle();
     }
 
     console.log(`Kitsuniru theme ${currentVersion} was initialized`);

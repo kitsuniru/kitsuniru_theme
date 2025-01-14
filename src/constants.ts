@@ -1,2 +1,2 @@
 export const extensionFullName = 'kitsuniru.kitsuniru-theme';
-export const lastVersionKey = 'last_version';
+export const lastVersionKey = 'kitsuniru_last_version';

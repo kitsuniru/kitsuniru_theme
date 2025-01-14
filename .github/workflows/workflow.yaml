@@ -15,7 +15,7 @@ jobs:
         uses: cezarypiatek/VsixVersionAction@1.1
         with:
           version: github.ref_name
-          vsix-manifest-file: /.vsixmanifest
+          vsix-manifest-file: .vsixmanifest
       - uses: lannonbr/vsce-action@4.0.0
         with:
           args: "package -o extension_${{ github.ref_name }}.vsix"

@@ -3,9 +3,8 @@ import * as vscode from "vscode";
 const _otherSettings: Record<string, any> = {
 };
 
-const dependendedSettings = (): Record<string, any> => {
-    const selfExtension = vscode.extensions.getExtension("kitsuniru.kitsuniru-theme")!;
-    const selfExtensionPath = selfExtension.extensionPath;
+const dependendedSettings = (self: vscode.Extension<any>): Record<string, any> => {
+    const selfExtensionPath = self.extensionPath;
 
     return {
         ..._otherSettings,
@@ -18,10 +17,10 @@ const dependendedSettings = (): Record<string, any> => {
     };
 };
 
-export const updateUserSettings = async () => {
+export const updateUserSettings = async (self: vscode.Extension<any>) => {
     const configuration = vscode.workspace.getConfiguration();
     const defaultScope = vscode.ConfigurationTarget.Global;
-    const settings = dependendedSettings();
+    const settings = dependendedSettings(self);
 
     for (const [key, value] of Object.entries(settings)) {
         await configuration.update(key, value, defaultScope);

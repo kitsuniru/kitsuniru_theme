@@ -1,7 +1,7 @@
 on:
   push:
     tags:
-      - 'v*.*.*'
+      - '*.*.*'
 name: Build Extension
 jobs:
   build:
@@ -13,13 +13,13 @@ jobs:
       - run: npm install
       - run: tsc -p ./
       - name: Set version to ${{ github.ref_name }}
-        uses: cezarypiatek/VsixVersionAction@1.1
+        uses: restackio/update-json-file-action@2.1
         with:
-          version: github.ref_name
-          vsix-manifest-file: .vsixmanifest
+          file: package.json
+          fields: "{'version': '${{ github.ref_name }}'}"
       - uses: lannonbr/vsce-action@4.0.0
         with:
           args: "package -o extension_${{ github.ref_name }}.vsix"
       - uses: ncipollo/release-action@v1
         with:
-          artifacts: "extension_${{ github.ref_name }}.vsix"
+          artifacts: "kitsuniru_${{ github.ref_name }}.vsix"

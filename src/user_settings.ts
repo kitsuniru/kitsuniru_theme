@@ -1,6 +1,8 @@
 import * as vscode from "vscode";
+import { extensionDisplayName } from "./constants";
 
 const _otherSettings: Record<string, any> = {
+    "workbench.colorTheme": extensionDisplayName,
 };
 
 const stylingSettings = (self: vscode.Extension<any>): Record<string, any> => {

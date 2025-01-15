@@ -12,7 +12,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: npm install
-      - run: tsc -p ./
       - name: Set version to ${{ github.ref_name }}
         uses: iamthenoah/gh-action-update-json@v1
         with:

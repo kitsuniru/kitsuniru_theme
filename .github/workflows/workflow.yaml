@@ -21,7 +21,7 @@ jobs:
           value: ${{ github.ref_name }}
       - uses: lannonbr/vsce-action@4.0.0
         with:
-          args: "package -o extension_${{ github.ref_name }}.vsix"
+          args: "package -o kitsuniru_${{ github.ref_name }}.vsix"
       - uses: ncipollo/release-action@v1
         with:
           artifacts: "kitsuniru_${{ github.ref_name }}.vsix"

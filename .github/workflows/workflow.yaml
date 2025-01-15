@@ -14,10 +14,11 @@ jobs:
       - run: npm install
       - run: tsc -p ./
       - name: Set version to ${{ github.ref_name }}
-        uses: restackio/update-json-file-action@2.1
+        uses: iamthenoah/gh-action-update-json@v1
         with:
-          file: package.json
-          fields: "{'version': '${{ github.ref_name }}'}"
+          file: './package.json'
+          key: 'version'
+          value: ${{ github.ref_name }}
       - uses: lannonbr/vsce-action@4.0.0
         with:
           args: "package -o extension_${{ github.ref_name }}.vsix"

@@ -11,8 +11,8 @@ export async function activate(context: vscode.ExtensionContext) {
 
     if (currentVersion !== lastVersion) {
         context.globalState.update(lastVersionKey, currentVersion);
-        updateUserSettings(self);
         validateCustomUiStyle();
+        updateUserSettings(self);
     }
 
     console.log(`Kitsuniru theme ${currentVersion} was initialized`);
